@@ -15,7 +15,7 @@ public class JobService {
     public List<Job> allJobs(){
         return jobRepositiory.findAll();
     }
-    public Optional<Job> singleJob(ObjectId id) {
-        return jobRepositiory.findById(id);
+    public Optional<Job> singleJob(String jobId) {
+        return jobRepositiory.findJobByJobId(jobId);
     }
 }

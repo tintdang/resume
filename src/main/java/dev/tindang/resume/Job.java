@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 public class Job {
     @Id
     private ObjectId id;
+    private String jobId;
     private String jobTitle;
     private String employer;
     private String startDate;

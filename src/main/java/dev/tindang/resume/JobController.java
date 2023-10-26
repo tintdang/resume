@@ -22,8 +22,8 @@ public class JobController {
         return new ResponseEntity<List<Job>>(jobService.allJobs(), HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Optional<Job>> getSingleJob(@PathVariable ObjectId id) {
-        return new ResponseEntity<Optional<Job>>(jobService.singleJob(id), HttpStatus.OK);
+    @GetMapping("/{jobId}")
+    public ResponseEntity<Optional<Job>> getSingleJob(@PathVariable String jobId) {
+        return new ResponseEntity<Optional<Job>>(jobService.singleJob(jobId), HttpStatus.OK);
     }
 }
